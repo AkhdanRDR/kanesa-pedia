@@ -116,13 +116,13 @@ export default function App() {
                                 Kontak
                             </Link>
                             <a
-                                href="#ebook"
+                                href="http://103.174.114.107:6060/dashboard"
                                 className="text-[#0d0b04]/70 hover:text-[#c5a84b] transition-colors"
                             >
                                 E-Book
                             </a>
                             <a
-                                href="#digilib"
+                                href="http://103.174.114.107/slims/index.php"
                                 className="text-[#0d0b04]/70 hover:text-[#c5a84b] transition-colors"
                             >
                                 Digilib
