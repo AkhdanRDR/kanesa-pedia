@@ -190,13 +190,15 @@ export default function App() {
                                 <span>Teman Setia Eksplorasi Ilmu</span>
                             </div>
                             <h1 className="text-5xl lg:text-6xl font-bold text-[#0d0b04] leading-tight">
-                                Buka Kunci Pengetahuan,{" "}
-                                Raih Prestasi Tanpa Batas di KanesaPedia.
+                                Buka Kunci Pengetahuan, Raih Prestasi Tanpa
+                                Batas di KanesaPedia.
                             </h1>
                             <p className="text-xl text-[#0d0b04]/60 leading-relaxed">
-                                Bebaskan rasa ingin tahumu. Akses ribuan buku unggulan, jurnal interaktif, 
-                                dan literatur terkini dalam satu sentuhan. Mari wujudkan masa depan cerah 
-                                melalui kebiasaan membaca tiada henti.
+                                Bebaskan rasa ingin tahumu. Akses ribuan buku
+                                unggulan, jurnal interaktif, dan literatur
+                                terkini dalam satu sentuhan. Mari wujudkan masa
+                                depan cerah melalui kebiasaan membaca tiada
+                                henti.
                             </p>
                             <div className="flex flex-wrap gap-4 pt-2">
                                 <button className="px-8 py-3.5 bg-[#c5a84b] text-[#fcfbf7] rounded-full hover:bg-[#b39742] transition-all flex items-center gap-2 group font-semibold shadow-lg shadow-[#c5a84b]/20">
@@ -353,10 +355,12 @@ export default function App() {
                             </span>
                         </h2>
                         <p className="text-lg text-muted-foreground leading-relaxed">
-                            KanesaPedia hadir bukan sekadar sebagai ruang penyimpanan tumpukan buku, 
-                            melainkan sebuah ekosistem belajar hidup yang didesain secara revolusioner 
-                            untuk memicu imajinasimu. Kami menyatukan literasi klasik dengan kekuatan 
-                            teknologi terkini untuk pengalaman belajar yang luar biasa.
+                            KanesaPedia hadir bukan sekadar sebagai ruang
+                            penyimpanan tumpukan buku, melainkan sebuah
+                            ekosistem belajar hidup yang didesain secara
+                            revolusioner untuk memicu imajinasimu. Kami
+                            menyatukan literasi klasik dengan kekuatan teknologi
+                            terkini untuk pengalaman belajar yang luar biasa.
                         </p>
                         <div className="grid sm:grid-cols-2 gap-6 mt-6">
                             <div className="flex flex-col gap-2">
@@ -392,8 +396,9 @@ export default function App() {
                             Sudut Ruang yang Menghidupkan Potensimu
                         </h2>
                         <p className="text-xl text-[#0d0b04]/60 max-w-2xl mx-auto">
-                            Tiap sudut kami rancang secara detil dengan penuh estetika, agar kamu 
-                            selalu merasa nyaman dan tak henti terinspirasi menimba setiap tetes ilmu.
+                            Tiap sudut kami rancang secara detil dengan penuh
+                            estetika, agar kamu selalu merasa nyaman dan tak
+                            henti terinspirasi menimba setiap tetes ilmu.
                         </p>
                     </div>
                     <div className="grid grid-cols-2 md:grid-cols-4 gap-4 auto-rows-[200px]">
@@ -456,9 +461,11 @@ export default function App() {
                                 Visi
                             </h3>
                             <p className="text-[#0d0b04]/60 leading-relaxed">
-                                Memimpin transformasi digital dalam dunia pendidikan, merajut asa, 
-                                dan memberdayakan generasi pembelajar tanpa batas sekat agar mereka 
-                                siap menghadapi panggung emas dunia masa depan.
+                                Memimpin transformasi digital dalam dunia
+                                pendidikan, merajut asa, dan memberdayakan
+                                generasi pembelajar tanpa batas sekat agar
+                                mereka siap menghadapi panggung emas dunia masa
+                                depan.
                             </p>
                         </div>
                         <div className="bg-[#fcfbf7] rounded-2xl p-8 border border-[#0d0b04]/5 hover:border-[#6e84d0]/20 transition-all">
@@ -677,12 +684,14 @@ export default function App() {
                         transition={{ duration: 0.6 }}
                     >
                         <h2 className="text-4xl md:text-6xl font-bold tracking-tight text-foreground mb-6">
-                            Siap Memulai Petualangan <br /> <span className="text-primary italic">Barumu?</span>
+                            Siap Memulai Petualangan <br />{" "}
+                            <span className="text-primary italic">Barumu?</span>
                         </h2>
                         <p className="text-lg md:text-xl text-muted-foreground max-w-2xl mx-auto">
-                            Jangan biarkan asa dan potensimu terkurung. Buka jendela dunia lebar-lebar, 
-                            akses literatur istimewa tak terhingga, dan kepakkan sayap kesuksesanmu 
-                            kini juga.
+                            Jangan biarkan asa dan potensimu terkurung. Buka
+                            jendela dunia lebar-lebar, akses literatur istimewa
+                            tak terhingga, dan kepakkan sayap kesuksesanmu kini
+                            juga.
                         </p>
                     </motion.div>
 
@@ -753,6 +762,14 @@ export default function App() {
                                     { label: "Tentang", to: "/tentang" },
                                     { label: "Artikel", to: "/artikel" },
                                     { label: "Kontak", to: "/kontak" },
+                                    {
+                                        label: "E-Book",
+                                        to: "http://103.174.114.107:6060/dashboard",
+                                    },
+                                    {
+                                        label: "Digilib",
+                                        to: "http://103.174.114.107/slims/index.php",
+                                    },
                                 ].map((link) => (
                                     <li key={link.to}>
                                         <Link
