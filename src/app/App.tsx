@@ -67,9 +67,9 @@ export default function App() {
     const [isMenuOpen, setIsMenuOpen] = useState(false);
 
     return (
-        <div className="min-h-screen bg-[#fcfbf7]">
+        <div className="min-h-screen bg-background">
             {/* Navigation */}
-            <nav className="fixed top-0 w-full bg-[#fcfbf7]/95 backdrop-blur-sm z-50 border-b border-[#c5a84b]/10">
+            <nav className="fixed top-0 w-full bg-accent/3 backdrop-blur-sm z-50 border-b border-accent/10">
                 <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
                     <div className="flex justify-between items-center h-16">
                         <div className="flex items-center gap-2">
@@ -78,7 +78,7 @@ export default function App() {
                                 alt="Logo"
                                 className="w-10 h-10 object-cover"
                             />
-                            <span className="text-xl font-semibold text-[#0d0b04]">
+                            <span className="text-xl font-semibold text-foreground">
                                 KanesaPedia
                             </span>
                         </div>
@@ -87,54 +87,54 @@ export default function App() {
                         <div className="hidden md:flex items-center gap-8">
                             <a
                                 href="#beranda"
-                                className="text-[#0d0b04]/70 hover:text-[#c5a84b] transition-colors"
+                                className="text-foreground/70 hover:text-accent transition-colors"
                             >
                                 Beranda
                             </a>
                             <Link
                                 to="/layanan"
-                                className="text-[#0d0b04]/70 hover:text-[#c5a84b] transition-colors"
+                                className="text-foreground/70 hover:text-accent transition-colors"
                             >
                                 Layanan
                             </Link>
                             <Link
                                 to="/tentang"
-                                className="text-[#0d0b04]/70 hover:text-[#c5a84b] transition-colors"
+                                className="text-foreground/70 hover:text-accent transition-colors"
                             >
                                 Tentang
                             </Link>
                             <Link
                                 to="/artikel"
-                                className="text-[#0d0b04]/70 hover:text-[#c5a84b] transition-colors"
+                                className="text-foreground/70 hover:text-accent transition-colors"
                             >
                                 Artikel
                             </Link>
                             <Link
                                 to="/kontak"
-                                className="text-[#0d0b04]/70 hover:text-[#c5a84b] transition-colors"
+                                className="text-foreground/70 hover:text-accent transition-colors"
                             >
                                 Kontak
                             </Link>
                             <a
                                 href="http://103.174.114.107:6060/dashboard"
-                                className="text-[#0d0b04]/70 hover:text-[#c5a84b] transition-colors"
+                                className="text-foreground/70 hover:text-accent transition-colors"
                             >
                                 E-Book
                             </a>
                             <a
                                 href="http://103.174.114.107/slims/index.php"
-                                className="text-[#0d0b04]/70 hover:text-[#c5a84b] transition-colors"
+                                className="text-foreground/70 hover:text-accent transition-colors"
                             >
                                 Digilib
                             </a>
-                            <button className="px-6 py-2 bg-[#c5a84b] text-[#fcfbf7] rounded-lg hover:bg-[#b39742] transition-all">
+                            <button className="px-6 py-2 bg-accent text-background rounded-lg hover:bg-accent/90 transition-all">
                                 Masuk
                             </button>
                         </div>
 
                         {/* Mobile Menu Button */}
                         <button
-                            className="md:hidden text-[#0d0b04]"
+                            className="md:hidden text-foreground"
                             onClick={() => setIsMenuOpen(!isMenuOpen)}
                         >
                             {isMenuOpen ? (
@@ -150,29 +150,29 @@ export default function App() {
                         <div className="md:hidden pb-4 space-y-3">
                             <a
                                 href="#beranda"
-                                className="block text-[#0d0b04]/70 hover:text-[#c5a84b] transition-colors"
+                                className="block text-foreground/70 hover:text-accent transition-colors"
                             >
                                 Beranda
                             </a>
                             <Link
                                 to="/tentang"
-                                className="block text-[#0d0b04]/70 hover:text-[#c5a84b] transition-colors"
+                                className="block text-foreground/70 hover:text-accent transition-colors"
                             >
                                 Tentang
                             </Link>
                             <a
                                 href="#galeri"
-                                className="block text-[#0d0b04]/70 hover:text-[#c5a84b] transition-colors"
+                                className="block text-foreground/70 hover:text-accent transition-colors"
                             >
                                 Galeri
                             </a>
                             <Link
                                 to="/artikel"
-                                className="block text-[#0d0b04]/70 hover:text-[#c5a84b] transition-colors"
+                                className="block text-foreground/70 hover:text-accent transition-colors"
                             >
                                 Artikel
                             </Link>
-                            <button className="w-full px-6 py-2 bg-[#c5a84b] text-[#fcfbf7] rounded-lg hover:bg-[#b39742] transition-all">
+                            <button className="w-full px-6 py-2 bg-accent text-background rounded-lg hover:bg-accent/90 transition-all">
                                 Masuk
                             </button>
                         </div>
@@ -181,59 +181,95 @@ export default function App() {
             </nav>
 
             {/* Hero Section */}
-            <section id="beranda" className="pt-32 pb-20 px-4">
+            <section id="beranda" className="pt-32 pb-20 px-4 bg-accent/3">
                 <div className="max-w-7xl mx-auto">
                     <div className="grid lg:grid-cols-2 gap-16 items-center">
                         <div className="space-y-7">
-                            <div className="inline-flex items-center gap-2 px-4 py-2 bg-[#c5a84b]/10 border border-[#c5a84b]/20 rounded-full text-xs font-bold uppercase tracking-wider text-[#c5a84b]">
+                            <div className="inline-flex items-center gap-2 px-4 py-2 bg-accent/3 border border-accent/20 rounded-full text-xs font-bold uppercase tracking-wider text-accent">
                                 <Library className="w-3.5 h-3.5" />
                                 <span>Teman Setia Eksplorasi Ilmu</span>
                             </div>
-                            <h1 className="text-5xl lg:text-6xl font-bold text-[#0d0b04] leading-tight">
+                            <h1 className="text-5xl lg:text-6xl font-bold text-foreground leading-tight">
                                 Buka Kunci Pengetahuan, Raih Prestasi Tanpa
                                 Batas di KanesaPedia.
                             </h1>
-                            <p className="text-xl text-[#0d0b04]/60 leading-relaxed">
+                            <p className="text-xl text-foreground/60 leading-relaxed">
                                 Bebaskan rasa ingin tahumu. Akses ribuan buku
                                 unggulan, jurnal interaktif, dan literatur
                                 terkini dalam satu sentuhan. Mari wujudkan masa
                                 depan cerah melalui kebiasaan membaca tiada
-                                henti.
+                                hentti.
                             </p>
                             <div className="flex flex-wrap gap-4 pt-2">
-                                <button className="px-8 py-3.5 bg-[#c5a84b] text-[#fcfbf7] rounded-full hover:bg-[#b39742] transition-all flex items-center gap-2 group font-semibold shadow-lg shadow-[#c5a84b]/20">
+                                <button className="px-8 py-3.5 bg-accent text-background rounded-full hover:bg-accent/90 transition-all flex items-center gap-2 group font-semibold shadow-lg shadow-accent/20">
                                     Mulai Eksplorasi
                                     <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
                                 </button>
-                                <button className="px-8 py-3.5 bg-[#fcfbf7] text-[#0d0b04] rounded-full hover:bg-white transition-all border border-[#0d0b04]/10 font-semibold">
+                                <button className="px-8 py-3.5 bg-background text-foreground rounded-full hover:bg-white transition-all border border-foreground/10 font-semibold">
                                     Halaman Masuk
                                 </button>
                             </div>
                             <div className="flex gap-10 pt-6">
                                 <div>
-                                    <div className="text-3xl font-bold text-[#c5a84b]">
+                                    <div className="text-3xl font-bold text-accent">
                                         5.000+
                                     </div>
-                                    <div className="text-[#0d0b04]/60">
+                                    <div className="text-foreground/60">
                                         Koleksi Buku
                                     </div>
                                 </div>
                                 <div>
-                                    <div className="text-3xl font-bold text-[#8cdada]">
+                                    <div className="text-3xl font-bold text-primary">
                                         2.500+
                                     </div>
-                                    <div className="text-[#0d0b04]/60">
+                                    <div className="text-foreground/60">
                                         Pengguna Aktif
                                     </div>
                                 </div>
                                 <div>
-                                    <div className="text-3xl font-bold text-[#6e84d0]">
+                                    <div className="text-3xl font-bold text-secondary">
                                         24/7
                                     </div>
-                                    <div className="text-[#0d0b04]/60">
+                                    <div className="text-foreground/60">
                                         Akses
                                     </div>
                                 </div>
+                            </div>
+                            <div className="pt-10">
+                                <a
+                                    href="/npp.jpg"
+                                    target="_blank"
+                                    rel="noreferrer"
+                                    className="relative inline-block group cursor-pointer"
+                                >
+                                    {/* Glowing background effect */}
+                                    <div className="absolute -inset-1 bg-gradient-to-r from-accent to-primary rounded-2xl blur opacity-20 group-hover:opacity-40 transition duration-1000 group-hover:duration-200"></div>
+
+                                    {/* Certificate Card */}
+                                    <div className="relative flex items-center gap-4 bg-white/80 backdrop-blur-sm p-3 rounded-2xl border border-accent/20 shadow-xl shadow-accent/5">
+                                        <div className="w-16 h-20 rounded-lg overflow-hidden border border-foreground/5 bg-background flex-shrink-0">
+                                            <img
+                                                src="/npp.jpg"
+                                                alt="Sertifikat NPP"
+                                                className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500"
+                                            />
+                                        </div>
+                                        <div className="pr-4">
+                                            <div className="flex items-center gap-1.5 text-accent mb-1">
+                                                <Award className="w-3.5 h-3.5" />
+                                                <span className="text-[10px] font-bold uppercase tracking-widest">
+                                                    Sertifikasi Resmi
+                                                </span>
+                                            </div>
+                                            <h4 className="text-sm font-bold text-foreground leading-tight">
+                                                Nomor Pokok Perpustakaan
+                                            </h4>
+                                            <p className="text-[11px] text-foreground/50 font-medium mt-0.5">
+                                                Terverifikasi & Terakreditasi
+                                            </p>
+                                        </div>
+                                    </div>
+                                </a>
                             </div>
                         </div>
                         {/* Right Visual Dashboard Abstract */}
@@ -342,15 +378,15 @@ export default function App() {
                         viewport={{ once: true, margin: "-100px" }}
                         transition={{ duration: 0.7 }}
                     >
-                        <div className="flex items-center gap-2 px-4 py-2 bg-[#8cdada]/10 border border-[#8cdada]/20 rounded-full w-fit">
-                            <Users className="w-4 h-4 text-[#8cdada]" />
-                            <span className="text-sm font-bold uppercase tracking-wider text-[#8cdada]">
+                        <div className="flex items-center gap-2 px-4 py-2 bg-primary/10 border border-primary/20 rounded-full w-fit">
+                            <Users className="w-4 h-4 text-primary" />
+                            <span className="text-sm font-bold uppercase tracking-wider text-primary">
                                 Mengenal KanesaPedia
                             </span>
                         </div>
                         <h2 className="text-3xl md:text-5xl font-bold text-foreground">
                             Lebih Dari Sekadar{" "}
-                            <span className="text-[#8cdada]">
+                            <span className="text-primary">
                                 Perpustakaan Biasa.
                             </span>
                         </h2>
@@ -385,17 +421,17 @@ export default function App() {
             </section>
 
             {/* Gallery Section */}
-            <section id="galeri" className="py-20 px-4 bg-[#fcfbf7]">
+            <section id="galeri" className="py-20 px-4 bg-accent/3">
                 <div className="max-w-7xl mx-auto">
                     <div className="text-center mb-12">
-                        <div className="inline-flex items-center gap-2 px-4 py-2 bg-[#6e84d0]/10 border border-[#6e84d0]/20 rounded-full mb-6 text-xs font-bold uppercase tracking-wider text-[#6e84d0]">
+                        <div className="inline-flex items-center gap-2 px-4 py-2 bg-secondary/10 border border-secondary/20 rounded-full mb-6 text-xs font-bold uppercase tracking-wider text-secondary">
                             <BookOpen className="w-3.5 h-3.5" />
                             <span>Titik Inspirasi</span>
                         </div>
-                        <h2 className="text-4xl font-bold text-[#0d0b04] mb-4">
+                        <h2 className="text-4xl font-bold text-foreground mb-4">
                             Sudut Ruang yang Menghidupkan Potensimu
                         </h2>
-                        <p className="text-xl text-[#0d0b04]/60 max-w-2xl mx-auto">
+                        <p className="text-xl text-foreground/60 max-w-2xl mx-auto">
                             Tiap sudut kami rancang secara detil dengan penuh
                             estetika, agar kamu selalu merasa nyaman dan tak
                             henti terinspirasi menimba setiap tetes ilmu.
@@ -424,12 +460,12 @@ export default function App() {
                                     alt={item.title}
                                     className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
                                 />
-                                <div className="absolute inset-0 bg-gradient-to-t from-[#0d0b04]/90 via-[#0d0b04]/20 to-transparent opacity-0 group-hover:opacity-100 transition-all duration-500">
+                                <div className="absolute inset-0 bg-gradient-to-t from-foreground/90 via-foreground/20 to-transparent opacity-0 group-hover:opacity-100 transition-all duration-500">
                                     <div className="absolute bottom-0 left-0 right-0 p-6 translate-y-4 group-hover:translate-y-0 transition-transform duration-500">
-                                        <h3 className="text-[#fcfbf7] font-bold text-lg md:text-xl">
+                                        <h3 className="text-background font-bold text-lg md:text-xl">
                                             {item.title}
                                         </h3>
-                                        <p className="text-[#fcfbf7]/70 text-sm mt-1">
+                                        <p className="text-background/70 text-sm mt-1">
                                             Jelajahi Fasilitas Kanesa
                                         </p>
                                     </div>
@@ -444,23 +480,23 @@ export default function App() {
             <section className="py-20 px-4 bg-white">
                 <div className="max-w-7xl mx-auto">
                     <div className="text-center mb-12">
-                        <div className="inline-flex items-center gap-2 px-4 py-2 bg-[#c5a84b]/10 border border-[#c5a84b]/20 rounded-full mb-6 text-xs font-bold uppercase tracking-wider text-[#c5a84b]">
+                        <div className="inline-flex items-center gap-2 px-4 py-2 bg-accent/3 border border-accent/20 rounded-full mb-6 text-xs font-bold uppercase tracking-wider text-accent">
                             <Target className="w-3.5 h-3.5" />
                             <span>Tujuan Utama</span>
                         </div>
-                        <h2 className="text-4xl font-bold text-[#0d0b04]">
+                        <h2 className="text-4xl font-bold text-foreground">
                             Kompas Arah Perjalanan Kami
                         </h2>
                     </div>
                     <div className="grid md:grid-cols-2 gap-6">
-                        <div className="bg-[#fcfbf7] rounded-2xl p-8 border border-[#0d0b04]/5 hover:border-[#c5a84b]/20 transition-all">
-                            <div className="w-14 h-14 bg-[#c5a84b] rounded-xl flex items-center justify-center mb-6">
-                                <Target className="w-7 h-7 text-[#fcfbf7]" />
+                        <div className="bg-accent/3 rounded-2xl p-8 border border-foreground/5 hover:border-accent/20 transition-all">
+                            <div className="w-14 h-14 bg-accent rounded-xl flex items-center justify-center mb-6">
+                                <Target className="w-7 h-7 text-background" />
                             </div>
-                            <h3 className="text-2xl font-bold text-[#0d0b04] mb-4">
+                            <h3 className="text-2xl font-bold text-foreground mb-4">
                                 Visi
                             </h3>
-                            <p className="text-[#0d0b04]/60 leading-relaxed">
+                            <p className="text-foreground/60 leading-relaxed">
                                 Memimpin transformasi digital dalam dunia
                                 pendidikan, merajut asa, dan memberdayakan
                                 generasi pembelajar tanpa batas sekat agar
@@ -468,45 +504,37 @@ export default function App() {
                                 depan.
                             </p>
                         </div>
-                        <div className="bg-[#fcfbf7] rounded-2xl p-8 border border-[#0d0b04]/5 hover:border-[#6e84d0]/20 transition-all">
-                            <div className="w-14 h-14 bg-[#6e84d0] rounded-xl flex items-center justify-center mb-6">
-                                <Lightbulb className="w-7 h-7 text-[#fcfbf7]" />
+                        <div className="bg-accent/3 rounded-2xl p-8 border border-foreground/5 hover:border-secondary/20 transition-all">
+                            <div className="w-14 h-14 bg-secondary rounded-xl flex items-center justify-center mb-6">
+                                <Lightbulb className="w-7 h-7 text-background" />
                             </div>
-                            <h3 className="text-2xl font-bold text-[#0d0b04] mb-4">
+                            <h3 className="text-2xl font-bold text-foreground mb-4">
                                 Misi
                             </h3>
-                            <ul className="space-y-3 text-[#0d0b04]/60">
+                            <ul className="space-y-3 text-foreground/60">
                                 <li className="flex gap-3">
-                                    <span className="text-[#c5a84b] mt-1">
-                                        •
-                                    </span>
+                                    <span className="text-accent mt-1">•</span>
                                     <span>
                                         Menyediakan akses koleksi digital
                                         berkualitas tinggi untuk semua kalangan
                                     </span>
                                 </li>
                                 <li className="flex gap-3">
-                                    <span className="text-[#c5a84b] mt-1">
-                                        •
-                                    </span>
+                                    <span className="text-accent mt-1">•</span>
                                     <span>
                                         Mendorong budaya literasi dan
                                         pembelajaran sepanjang hayat
                                     </span>
                                 </li>
                                 <li className="flex gap-3">
-                                    <span className="text-[#c5a84b] mt-1">
-                                        •
-                                    </span>
+                                    <span className="text-accent mt-1">•</span>
                                     <span>
                                         Membangun komunitas pembelajar yang
                                         kolaboratif dan inovatif
                                     </span>
                                 </li>
                                 <li className="flex gap-3">
-                                    <span className="text-[#c5a84b] mt-1">
-                                        •
-                                    </span>
+                                    <span className="text-accent mt-1">•</span>
                                     <span>
                                         Mengintegrasikan teknologi modern untuk
                                         pengalaman belajar yang optimal
@@ -516,43 +544,43 @@ export default function App() {
                         </div>
                     </div>
 
-                    <div className="mt-10 bg-[#fcfbf7] rounded-2xl p-8 border border-[#0d0b04]/5">
-                        <h3 className="text-2xl font-bold text-[#0d0b04] mb-8 text-center">
+                    <div className="mt-10 bg-accent/3 rounded-2xl p-8 border border-foreground/5">
+                        <h3 className="text-2xl font-bold text-foreground mb-8 text-center">
                             Peran Perpustakaan di Sekolah
                         </h3>
                         <div className="grid md:grid-cols-3 gap-8">
                             <div className="text-center">
-                                <div className="w-12 h-12 bg-[#c5a84b] rounded-lg mx-auto mb-4 flex items-center justify-center">
-                                    <BookOpen className="w-6 h-6 text-[#fcfbf7]" />
+                                <div className="w-12 h-12 bg-accent rounded-lg mx-auto mb-4 flex items-center justify-center">
+                                    <BookOpen className="w-6 h-6 text-background" />
                                 </div>
-                                <h4 className="font-semibold text-[#0d0b04] mb-2">
+                                <h4 className="font-semibold text-foreground mb-2">
                                     Sumber Pembelajaran
                                 </h4>
-                                <p className="text-[#0d0b04]/60">
+                                <p className="text-foreground/60">
                                     Menyediakan beragam referensi untuk
                                     mendukung kegiatan belajar mengajar
                                 </p>
                             </div>
                             <div className="text-center">
-                                <div className="w-12 h-12 bg-[#8cdada] rounded-lg mx-auto mb-4 flex items-center justify-center">
-                                    <Users className="w-6 h-6 text-[#fcfbf7]" />
+                                <div className="w-12 h-12 bg-primary rounded-lg mx-auto mb-4 flex items-center justify-center">
+                                    <Users className="w-6 h-6 text-background" />
                                 </div>
-                                <h4 className="font-semibold text-[#0d0b04] mb-2">
+                                <h4 className="font-semibold text-foreground mb-2">
                                     Pusat Literasi
                                 </h4>
-                                <p className="text-[#0d0b04]/60">
+                                <p className="text-foreground/60">
                                     Membangun kebiasaan membaca dan budaya
                                     literasi di lingkungan sekolah
                                 </p>
                             </div>
                             <div className="text-center">
-                                <div className="w-12 h-12 bg-[#6e84d0] rounded-lg mx-auto mb-4 flex items-center justify-center">
-                                    <Search className="w-6 h-6 text-[#fcfbf7]" />
+                                <div className="w-12 h-12 bg-secondary rounded-lg mx-auto mb-4 flex items-center justify-center">
+                                    <Search className="w-6 h-6 text-background" />
                                 </div>
-                                <h4 className="font-semibold text-[#0d0b04] mb-2">
+                                <h4 className="font-semibold text-foreground mb-2">
                                     Riset & Eksplorasi
                                 </h4>
-                                <p className="text-[#0d0b04]/60">
+                                <p className="text-foreground/60">
                                     Mendukung penelitian dan pengembangan
                                     keterampilan informasi siswa
                                 </p>
@@ -602,14 +630,14 @@ export default function App() {
             <section id="blog" className="py-20 px-4 bg-white">
                 <div className="max-w-7xl mx-auto">
                     <div className="text-center mb-12">
-                        <div className="inline-flex items-center gap-2 px-4 py-2 bg-[#6e84d0]/10 border border-[#6e84d0]/20 rounded-full mb-6 text-xs font-bold uppercase tracking-wider text-[#6e84d0]">
+                        <div className="inline-flex items-center gap-2 px-4 py-2 bg-secondary/10 border border-secondary/20 rounded-full mb-6 text-xs font-bold uppercase tracking-wider text-secondary">
                             <Lightbulb className="w-3.5 h-3.5" />
                             <span>Artikel & Blog</span>
                         </div>
-                        <h2 className="text-4xl font-bold text-[#0d0b04] mb-4">
+                        <h2 className="text-4xl font-bold text-foreground mb-4">
                             Wawasan & Inspirasi
                         </h2>
-                        <p className="text-xl text-[#0d0b04]/60 max-w-2xl mx-auto">
+                        <p className="text-xl text-foreground/60 max-w-2xl mx-auto">
                             Tips, tren literasi, dan update terbaru seputar
                             dunia pendidikan
                         </p>
@@ -640,7 +668,7 @@ export default function App() {
                         ].map((post, index) => (
                             <div
                                 key={index}
-                                className="bg-[#fcfbf7] rounded-2xl overflow-hidden border border-[#0d0b04]/5 hover:border-[#c5a84b]/30 transition-all group cursor-pointer"
+                                className="bg-background rounded-2xl overflow-hidden border border-foreground/5 hover:border-accent/30 transition-all group cursor-pointer"
                             >
                                 <div className="relative overflow-hidden h-48">
                                     <img
@@ -650,16 +678,16 @@ export default function App() {
                                     />
                                 </div>
                                 <div className="p-6">
-                                    <div className="text-sm text-[#c5a84b] mb-2">
+                                    <div className="text-sm text-accent mb-2">
                                         {post.date}
                                     </div>
-                                    <h3 className="font-bold text-[#0d0b04] mb-3 group-hover:text-[#c5a84b] transition-colors">
+                                    <h3 className="font-bold text-foreground mb-3 group-hover:text-accent transition-colors">
                                         {post.title}
                                     </h3>
-                                    <p className="text-[#0d0b04]/60 mb-4">
+                                    <p className="text-foreground/60 mb-4">
                                         {post.description}
                                     </p>
-                                    <button className="text-[#0d0b04] font-semibold flex items-center gap-2 group-hover:gap-3 transition-all">
+                                    <button className="text-foreground font-semibold flex items-center gap-2 group-hover:gap-3 transition-all">
                                         Baca Selengkapnya
                                         <ArrowRight className="w-4 h-4" />
                                     </button>
@@ -673,7 +701,7 @@ export default function App() {
             {/* CTA Section */}
             <section className="w-full py-24 px-6 md:px-12 lg:px-24 bg-background relative overflow-hidden">
                 {/* Decorative Blur Backgrounds */}
-                <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-full max-w-4xl h-[400px] bg-primary/20 blur-[100px] rounded-full z-0 pointer-events-none" />
+                <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-full max-w-4xl h-[400px] bg-accent/20 blur-[100px] rounded-full z-0 pointer-events-none" />
                 <div className="absolute top-1/2 left-1/4 w-[300px] h-[300px] bg-secondary/30 blur-[80px] rounded-full z-0 pointer-events-none" />
 
                 <div className="max-w-4xl mx-auto text-center relative z-10 flex flex-col items-center gap-8">
@@ -685,7 +713,7 @@ export default function App() {
                     >
                         <h2 className="text-4xl md:text-6xl font-bold tracking-tight text-foreground mb-6">
                             Siap Memulai Petualangan <br />{" "}
-                            <span className="text-primary italic">Barumu?</span>
+                            <span className="text-accent italic">Barumu?</span>
                         </h2>
                         <p className="text-lg md:text-xl text-muted-foreground max-w-2xl mx-auto">
                             Jangan biarkan asa dan potensimu terkurung. Buka
@@ -703,7 +731,7 @@ export default function App() {
                     >
                         <Button
                             size="lg"
-                            className="h-14 px-8 text-lg rounded-full font-semibold gap-2 shadow-xl shadow-primary/20 hover:shadow-primary/40 transition-all hover:-translate-y-1 group"
+                            className="bg-accent h-14 px-8 text-lg rounded-full font-semibold gap-2 shadow-xl shadow-accent/20 hover:shadow-accent/40 transition-all hover:-translate-y-1 group"
                         >
                             Mulai
                             <ArrowRight
@@ -741,7 +769,7 @@ export default function App() {
                                         <a
                                             key={i}
                                             href="#"
-                                            className="w-9 h-9 rounded-full bg-[#fcfbf7]/10 hover:bg-[#c5a84b] transition-colors flex items-center justify-center"
+                                            className="w-9 h-9 rounded-full bg-background/10 hover:bg-accent transition-colors flex items-center justify-center"
                                         >
                                             <Icon className="w-4 h-4" />
                                         </a>
@@ -752,7 +780,7 @@ export default function App() {
 
                         {/* Navigasi */}
                         <div>
-                            <h4 className="font-semibold mb-5 text-[#c5a84b]">
+                            <h4 className="font-semibold mb-5 text-accent">
                                 Navigasi
                             </h4>
                             <ul className="space-y-3 text-muted-foreground text-sm">
@@ -774,7 +802,7 @@ export default function App() {
                                     <li key={link.to}>
                                         <Link
                                             to={link.to}
-                                            className="hover:text-[#c5a84b] transition-colors"
+                                            className="hover:text-accent transition-colors"
                                         >
                                             {link.label}
                                         </Link>
@@ -785,20 +813,20 @@ export default function App() {
 
                         {/* Kontak */}
                         <div>
-                            <h4 className="font-semibold mb-5 text-[#8cdada]">
+                            <h4 className="font-semibold mb-5 text-primary">
                                 Kontak
                             </h4>
                             <ul className="space-y-3 text-muted-foreground text-sm">
                                 <li className="flex items-center gap-2">
-                                    <Mail className="w-4 h-4 text-[#8cdada] shrink-0" />
+                                    <Mail className="w-4 h-4 text-primary shrink-0" />
                                     <span>info@kanesapedia.sch.id</span>
                                 </li>
                                 <li className="flex items-center gap-2">
-                                    <Phone className="w-4 h-4 text-[#8cdada] shrink-0" />
+                                    <Phone className="w-4 h-4 text-primary shrink-0" />
                                     <span>(021) 1234-5678</span>
                                 </li>
                                 <li className="flex items-start gap-2">
-                                    <MapPin className="w-4 h-4 text-[#8cdada] shrink-0 mt-0.5" />
+                                    <MapPin className="w-4 h-4 text-primary shrink-0 mt-0.5" />
                                     <span>
                                         Jl. Pendidikan No. 123, Jakarta Selatan
                                         12345

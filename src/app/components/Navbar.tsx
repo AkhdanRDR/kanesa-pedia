@@ -22,7 +22,7 @@ export default function Navbar() {
             : location.pathname.startsWith(to);
 
     return (
-        <nav className="fixed top-0 w-full bg-[#fcfbf7]/95 backdrop-blur-sm z-50 border-b border-[#c5a84b]/10">
+        <nav className="fixed top-0 w-full bg-accent/3 backdrop-blur-sm z-50 border-b border-accent/10">
             <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
                 <div className="flex justify-between items-center h-16">
                     {/* Logo */}
@@ -32,7 +32,7 @@ export default function Navbar() {
                             alt="Logo"
                             className="w-10 h-10 object-cover"
                         />
-                        <span className="text-xl font-semibold text-[#0d0b04]">
+                        <span className="text-xl font-semibold text-foreground">
                             KanesaPedia
                         </span>
                     </Link>
@@ -45,21 +45,21 @@ export default function Navbar() {
                                 to={link.to}
                                 className={`transition-colors font-medium ${
                                     isActive(link.to)
-                                        ? "text-[#c5a84b]"
-                                        : "text-[#0d0b04]/70 hover:text-[#c5a84b]"
+                                        ? "text-accent"
+                                        : "text-foreground/70 hover:text-accent"
                                 }`}
                             >
                                 {link.label}
                             </Link>
                         ))}
-                        <button className="px-6 py-2 bg-[#c5a84b] text-[#fcfbf7] rounded-lg hover:bg-[#b39742] transition-all font-medium">
+                        <button className="px-6 py-2 bg-accent text-background rounded-lg hover:bg-accent/90 transition-all font-medium">
                             Masuk
                         </button>
                     </div>
 
                     {/* Mobile Menu Button */}
                     <button
-                        className="md:hidden text-[#0d0b04]"
+                        className="md:hidden text-foreground"
                         onClick={() => setIsMenuOpen(!isMenuOpen)}
                         aria-label="Toggle menu"
                     >
@@ -73,7 +73,7 @@ export default function Navbar() {
 
                 {/* Mobile Navigation */}
                 {isMenuOpen && (
-                    <div className="md:hidden pb-4 space-y-3 border-t border-[#c5a84b]/10 pt-4">
+                    <div className="md:hidden pb-4 space-y-3 border-t border-accent/10 pt-4">
                         {navLinks.map((link) => (
                             <Link
                                 key={link.to}
@@ -81,14 +81,14 @@ export default function Navbar() {
                                 onClick={() => setIsMenuOpen(false)}
                                 className={`block transition-colors font-medium ${
                                     isActive(link.to)
-                                        ? "text-[#c5a84b]"
-                                        : "text-[#0d0b04]/70 hover:text-[#c5a84b]"
+                                        ? "text-accent"
+                                        : "text-foreground/70 hover:text-accent"
                                 }`}
                             >
                                 {link.label}
                             </Link>
                         ))}
-                        <button className="w-full px-6 py-2 bg-[#c5a84b] text-[#fcfbf7] rounded-lg hover:bg-[#b39742] transition-all font-medium">
+                        <button className="w-full px-6 py-2 bg-accent text-background rounded-lg hover:bg-accent/90 transition-all font-medium">
                             Masuk
                         </button>
                     </div>
