@@ -590,6 +590,80 @@ export default function App() {
                 </div>
             </section>
 
+            {/* Buku Koleksi Terbaru Section */}
+            <section className="py-20 px-4 bg-accent/3">
+                <div className="max-w-7xl mx-auto">
+                    <div className="text-center mb-12">
+                        <div className="inline-flex items-center gap-2 px-4 py-2 bg-primary/10 border border-primary/20 rounded-full mb-6 text-xs font-bold uppercase tracking-wider text-primary">
+                            <BookOpen className="w-3.5 h-3.5" />
+                            <span>Koleksi Baru</span>
+                        </div>
+                        <h2 className="text-4xl font-bold text-foreground mb-4">
+                            Buku Koleksi Terbaru
+                        </h2>
+                        <p className="text-xl text-foreground/60 max-w-2xl mx-auto">
+                            Temukan berbagai buku terbaru yang telah kami tambahkan untuk menemani perjalanan literasimu.
+                        </p>
+                    </div>
+                    <div className="grid grid-cols-2 md:grid-cols-5 gap-6">
+                        {[
+                            {
+                                title: "Misteri Bintang Jatuh",
+                                author: "Ahmad Fuadi",
+                                image: "https://images.unsplash.com/photo-1544947950-fa07a98d237f?auto=format&fit=crop&q=80&w=400&h=600",
+                            },
+                            {
+                                title: "Teknologi Masa Depan",
+                                author: "Dian Sastro",
+                                image: "https://images.unsplash.com/photo-1512820790803-83ca734da794?auto=format&fit=crop&q=80&w=400&h=600",
+                            },
+                            {
+                                title: "Psikologi Komunikasi",
+                                author: "Jalaluddin R",
+                                image: "https://images.unsplash.com/photo-1589829085413-56de8ae18c73?auto=format&fit=crop&q=80&w=400&h=600",
+                            },
+                            {
+                                title: "Sejarah Nusantara",
+                                author: "Pramoedya A.T",
+                                image: "https://images.unsplash.com/photo-1532012197267-da84d127e765?auto=format&fit=crop&q=80&w=400&h=600",
+                            },
+                            {
+                                title: "Panduan Literasi 4.0",
+                                author: "Rhenald Kasali",
+                                image: "https://images.unsplash.com/photo-1524578974557-5cc8e9f562bd?auto=format&fit=crop&q=80&w=400&h=600",
+                            },
+                        ].map((book, index) => (
+                            <div key={index} className="group relative rounded-xl overflow-hidden shadow-sm hover:shadow-xl transition-all duration-300 border border-foreground/5 bg-background flex flex-col">
+                                <div className="aspect-[2/3] overflow-hidden relative">
+                                    <img 
+                                        src={book.image} 
+                                        alt={book.title}
+                                        className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
+                                    />
+                                    <div className="absolute inset-0 bg-gradient-to-t from-background/90 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-all duration-300"></div>
+                                </div>
+                                <div className="p-4 flex flex-col flex-grow justify-between bg-background">
+                                    <div>
+                                        <h3 className="font-bold text-foreground text-sm line-clamp-2 mb-1 group-hover:text-accent transition-colors">
+                                            {book.title}
+                                        </h3>
+                                        <p className="text-xs text-foreground/60">
+                                            {book.author}
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+                        ))}
+                    </div>
+                    <div className="flex justify-center mt-10">
+                         <button className="px-8 py-3 bg-primary text-primary-foreground rounded-full hover:bg-primary/90 transition-all flex items-center gap-2 group font-semibold shadow-lg shadow-primary/20">
+                            Lihat Semua Koleksi
+                            <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
+                         </button>
+                    </div>
+                </div>
+            </section>
+
             {/* Partners Section */}
             <section className="w-full py-16 border-y border-border bg-background overflow-hidden flex flex-col gap-8">
                 <div className="text-center">
